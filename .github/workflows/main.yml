@@ -33,7 +33,7 @@ jobs:
     - name: Lizard
       run: pip install lizard
 
-    - uses: rachicks/appsecbot/@2ae56c4583f39b0a20e615750a9b56651d43c0c0
+    - uses: rachicks/appsecbot/@1058172e22a224d21c88ad01f1ec2510a541e263
       env:
         NODE_PATH: ~/.npm-global
         SPLUNK_TOKEN: "${{ secrets.SPLUNK_TOKEN }}"
