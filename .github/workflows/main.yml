@@ -18,11 +18,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
           node-version: '10.x'
-    - name: Npm Install  
-      run: npm install
-    - name: Npm test
-      run: npm test
-        
+ 
     - name: Install Python
       uses: actions/setup-python@v1
       with:
@@ -30,6 +26,7 @@ jobs:
         
     - name: Lizard
       run: pip install lizard
+      
     - name: mkdir
       run: mkdir ~/.npm-global  
     - name: node-modules path
@@ -38,6 +35,7 @@ jobs:
       run: echo $USER 
     - name: chown
       run: sudo chown -R $USER  /usr/local/lib/node_modules
+      
     - name: secret-shield 
       run: sudo npm install -g @mapbox/secret-shield
     - uses: rachicks/appsecbot/@12cc37f1f1e7586b21525c6e9828233d92877364
