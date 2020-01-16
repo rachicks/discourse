@@ -38,6 +38,10 @@ jobs:
       
     - name: secret-shield 
       run: sudo npm install -g @mapbox/secret-shield
+
+    - name: npm install
+      run: npm install
+      
     - uses: rachicks/appsecbot/@12cc37f1f1e7586b21525c6e9828233d92877364
       env:
         NODE_PATH: ~/.npm-global
