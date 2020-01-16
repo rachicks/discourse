@@ -8,20 +8,26 @@ jobs:
     steps:
     - name: Checkout Project
       uses: actions/checkout@v1
+      
     - name: Install Ruby
       uses: actions/setup-ruby@v1
       with:
         ruby-version: '2.x'
+    
     - name: Install Node
       uses: actions/setup-node@v1
-        with:
+      with:
           node-version: '10.x'
-      - run: npm install
-      - run: npm test
+    - name: Npm Install  
+      run: npm install
+    - name: Npm test
+      run: npm test
+        
     - name: Install Python
       uses: actions/setup-python@v1
       with:
         python-version: '3.x'
+        
     - name: Lizard
       run: pip install lizard
     - name: mkdir
