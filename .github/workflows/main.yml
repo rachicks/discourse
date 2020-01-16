@@ -18,12 +18,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '10.x'
-    - run: sudo npm install -g @actions/core
-    - run: sudo npm install -g @actions/github
-    - run: sudo npm install -g @octokit/rest
-    - run: sudo npm install -g @actions/exec
-    - run: sudo npm install -g @actions/tool-cache
-    - run: sudo npm install -g @mapbox/secret-shield
 
     - name: Install Python
       uses: actions/setup-python@v1
@@ -33,7 +27,7 @@ jobs:
     - name: Lizard
       run: pip install lizard
 
-    - uses: rachicks/appsecbot/@41b14fb0179e9bf4771199fcd2f9ed1efb02d3b0
+    - uses: rachicks/appsecbot/@8822b2b7accb04d96c0ef6da7e306c8bdcd1193f
       env:
         SPLUNK_TOKEN: "${{ secrets.SPLUNK_TOKEN }}"
         GITHUB_TOKEN: "${{ secrets.myToken }}"
