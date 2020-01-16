@@ -23,6 +23,7 @@ jobs:
     - name: node-modules path
       env: 
         NODE_PATH: ~/.npm-global
+      run: echo $USER 
     - name: chown
       run: sudo chown -R $USER  /usr/local/lib/node_modules
     - name: secret-shield 
