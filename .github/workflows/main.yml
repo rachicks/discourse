@@ -41,8 +41,8 @@ jobs:
 
     - name: npm install
       run: npm install
-      
-    - uses: rachicks/appsecbot/@12cc37f1f1e7586b21525c6e9828233d92877364
+
+    - uses: rachicks/appsecbot/@1162fff623e8ad78954e63404d0793b0f700eecc
       env:
         NODE_PATH: ~/.npm-global
         SPLUNK_TOKEN: "${{ secrets.SPLUNK_TOKEN }}"
