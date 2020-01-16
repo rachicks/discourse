@@ -19,12 +19,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '10.x'
-        run: sudo npm install -g @actions/core
-        run: sudo npm install -g @actions/github
-        run: sudo npm install -g @octokit/rest
-        run: sudo npm install -g @actions/exec
-        run: sudo npm install -g @actions/tool-cache
-        run: sudo npm install -g @mapbox/secret-shield
+    - run: sudo npm install -g @actions/core
+    - run: sudo npm install -g @actions/github
+    - run: sudo npm install -g @octokit/rest
+    - run: sudo npm install -g @actions/exec
+    - run: sudo npm install -g @actions/tool-cache
+    - run: sudo npm install -g @mapbox/secret-shield
 
     - name: Install Python
       uses: actions/setup-python@v1
