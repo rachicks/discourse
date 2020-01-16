@@ -15,10 +15,9 @@ jobs:
         ruby-version: '2.x'
     
     - name: Install Node
-      steps:
-        uses: actions/setup-node@v1
-        with:
-          node-version: '10.x'
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
     - run: sudo npm install -g @actions/core
     - run: sudo npm install -g @actions/github
     - run: sudo npm install -g @octokit/rest
