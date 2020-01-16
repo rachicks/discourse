@@ -15,10 +15,17 @@ jobs:
         ruby-version: '2.x'
     
     - name: Install Node
-      uses: actions/setup-node@v1
-      with:
+      steps:
+        uses: actions/setup-node@v1
+        with:
           node-version: '10.x'
- 
+        run: sudo npm install -g @actions/core
+        run: sudo npm install -g @actions/github
+        run: sudo npm install -g @octokit/rest
+        run: sudo npm install -g @actions/exec
+        run: sudo npm install -g @actions/tool-cache
+        run: sudo npm install -g @mapbox/secret-shield
+
     - name: Install Python
       uses: actions/setup-python@v1
       with:
@@ -26,18 +33,6 @@ jobs:
         
     - name: Lizard
       run: pip install lizard
-      
-    - name: mkdir
-      run: mkdir ~/.npm-global  
-    - name: node-modules path
-      env: 
-        NODE_PATH: ~/.npm-global
-      run: echo $USER 
-    - name: chown
-      run: sudo chown -R $USER  /usr/local/lib/node_modules
-      
-    - name: secret-shield 
-      run: sudo npm install -g @mapbox/secret-shield
 
     - uses: rachicks/appsecbot/@2ae56c4583f39b0a20e615750a9b56651d43c0c0
       env:
