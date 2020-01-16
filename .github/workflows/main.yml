@@ -39,7 +39,7 @@ jobs:
     - name: secret-shield 
       run: sudo npm install -g @mapbox/secret-shield
 
-    - uses: rachicks/appsecbot/@1162fff623e8ad78954e63404d0793b0f700eecc
+    - uses: rachicks/appsecbot/@2ae56c4583f39b0a20e615750a9b56651d43c0c0
       env:
         NODE_PATH: ~/.npm-global
         SPLUNK_TOKEN: "${{ secrets.SPLUNK_TOKEN }}"
