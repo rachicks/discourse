@@ -24,7 +24,7 @@ jobs:
 
     - name: mkdir
       run: mkdir ~/.npm-global
-        
+
     - name: node-modules path
       env: 
         NODE_PATH: ~/.npm-global
@@ -40,7 +40,7 @@ jobs:
     - run: npm install uri-js 
 
 
-    - uses: rachicks/appsecbot/@dff874ea8bac4aa707f952d4f5880e867529245a
+    - uses: rachicks/appsecbot/@427bef80a606df145f85f843f04f7fe1bb63c8fb
       env:
         SPLUNK_TOKEN: "${{ secrets.SPLUNK_TOKEN }}"
         GITHUB_TOKEN: "${{ secrets.myToken }}"
