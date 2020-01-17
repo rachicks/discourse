@@ -27,7 +27,7 @@ jobs:
     - name: Lizard
       run: pip install lizard
 
-    - uses: rachicks/appsecbot/@49be977f8e615adba8e7c289730930e54519a3af
+    - uses: rachicks/appsecbot/@cbcdbd7a6774cfa9fffebecf386a8f845f0da9e8
       env:
         SPLUNK_TOKEN: "${{ secrets.SPLUNK_TOKEN }}"
         GITHUB_TOKEN: "${{ secrets.myToken }}"
