@@ -21,13 +21,24 @@ jobs:
         
     - name: Lizard
       run: pip install lizard
+
+    - name: mkdir
+      run: mkdir ~/.npm-global
+        
+    - name: node-modules path
+      env: 
+        NODE_PATH: ~/.npm-global
+      run: echo $USER
+    - name: chown
+      run: sudo chown -R $USER  /usr/local/lib/node_modules
     
+    - run: echo $NODE_PATH
     - run: npm install @actions/core
     - run: npm install @actions/exec
     - run: npm install @actions/github
     - run: npm install @actions/tool-cache
     - run: npm install uri-js 
-    
+
 
     - uses: rachicks/appsecbot/@dff874ea8bac4aa707f952d4f5880e867529245a
       env:
