@@ -22,7 +22,7 @@ jobs:
     - name: Lizard
       run: pip install lizard
     
-    - run: npm install @@actions/core
+    - run: npm install @actions/core
     - run: npm install @actions/exec
 
     - uses: rachicks/appsecbot/@dff874ea8bac4aa707f952d4f5880e867529245a
