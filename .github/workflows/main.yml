@@ -13,11 +13,6 @@ jobs:
       uses: actions/setup-ruby@v1
       with:
         ruby-version: '2.x'
-    
-    - name: Install Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
 
     - name: Install Python
       uses: actions/setup-python@v1
