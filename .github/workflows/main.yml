@@ -5,6 +5,7 @@ jobs:
   build:
     name: AppSecInABox
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout Project
       uses: actions/checkout@v1
@@ -40,7 +41,7 @@ jobs:
     - run: npm install uri-js 
 
 
-    - uses: rachicks/appsecbot/@427bef80a606df145f85f843f04f7fe1bb63c8fb
+    - uses: rachicks/appsecinabox/@cf616b1555ae90b647ae5c74fdd54e430d1cec2a
       env:
         SPLUNK_TOKEN: "${{ secrets.SPLUNK_TOKEN }}"
         GITHUB_TOKEN: "${{ secrets.myToken }}"
