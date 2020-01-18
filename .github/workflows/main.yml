@@ -41,7 +41,7 @@ jobs:
     - run: npm install uri-js 
 
 
-    - uses: rachicks/appsecinabox/@cf616b1555ae90b647ae5c74fdd54e430d1cec2a/action-a/
+    - uses: rachicks/appsecinabox/action-a/@cf616b1555ae90b647ae5c74fdd54e430d1cec2a
       env:
         SPLUNK_TOKEN: "${{ secrets.SPLUNK_TOKEN }}"
         GITHUB_TOKEN: "${{ secrets.myToken }}"
