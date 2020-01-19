@@ -25,7 +25,7 @@ jobs:
     
     - run: sudo npm install -g @mapbox/secret-shield
 
-    - uses: rachicks/appsecinabox/action-a/@c65d3a29cf736a763de198ed9b5482660eb223df
+    - uses: rachicks/appsecinabox/action-a/@83d3678865ff4b5e2c280bc2af44761e50f72bfc
       env:
         SPLUNK_TOKEN: "${{ secrets.SPLUNK_TOKEN }}"
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
