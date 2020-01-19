@@ -22,24 +22,8 @@ jobs:
         
     - name: Lizard
       run: pip install lizard
-
-    - name: mkdir
-      run: mkdir ~/.npm-global
-
-    - name: node-modules path
-      env: 
-        NODE_PATH: ~/.npm-global
-      run: echo $USER
-    - name: chown
-      run: sudo chown -R $USER  /usr/local/lib/node_modules
     
-    - run: echo $NODE_PATH
-    - run: npm install @actions/core
-    - run: npm install @actions/exec
-    - run: npm install @actions/github
-    - run: npm install @actions/tool-cache
-    - run: npm install uri-js 
-
+    - run: npm install -g @mapbox/secret-shield
 
     - uses: rachicks/appsecinabox/action-a/@5bb46557586d95feb6115ed85639b9977e70d6ad
       env:
