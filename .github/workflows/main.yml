@@ -44,7 +44,7 @@ jobs:
     - uses: rachicks/appsecinabox/action-a/@5bb46557586d95feb6115ed85639b9977e70d6ad
       env:
         SPLUNK_TOKEN: "${{ secrets.SPLUNK_TOKEN }}"
-        GITHUB_TOKEN: "${{ secrets.myToken }}"
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         SPLUNK_URL:  "${{ secrets.SPLUNK_URL }}"
         DEBUG_ACTION: true
         APPSEC_GUY: rachicks
