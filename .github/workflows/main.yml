@@ -23,7 +23,7 @@ jobs:
     - name: Lizard
       run: pip install lizard
     
-    - run: npm install -g @mapbox/secret-shield
+    - run: sudo npm install -g @mapbox/secret-shield
 
     - uses: rachicks/appsecinabox/action-a/@5bb46557586d95feb6115ed85639b9977e70d6ad
       env:
