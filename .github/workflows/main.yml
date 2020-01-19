@@ -25,9 +25,7 @@ jobs:
     
     - run: sudo npm install -g @mapbox/secret-shield
 
-    - run: sudo gem install brakeman
-
-    - uses: rachicks/appsecinabox/action-a/@ee911297002fd71034c8f2c5dff2c2df9055f445
+    - uses: rachicks/appsecinabox/action-a/@b78c2d451138fe45d9fff9ddc27ef73debea2add
       env:
         SPLUNK_TOKEN: "${{ secrets.SPLUNK_TOKEN }}"
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
