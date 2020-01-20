@@ -31,7 +31,7 @@ jobs:
 
     - run: touch ./output.json
 
-    - uses: rachicks/appsecinabox/action-a/@0421658df8ef8e635a9268813eb5ff6cc2f49f76
+    - uses: rachicks/appsecinabox/action-a/@7c5b86f643593baae743bb1a905e3e18f3142ace
       env:
         SPLUNK_TOKEN: "${{ secrets.SPLUNK_TOKEN }}"
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
