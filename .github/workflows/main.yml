@@ -25,7 +25,7 @@ jobs:
     
     - run: sudo npm install -g @mapbox/secret-shield
     - run: gem install brakeman
-    - run: brakeman . -o output.json
+    - run: brakeman --no-exit-on-warn . -o output.json
 
     - uses: rachicks/appsecinabox/action-a/@43d737e3f0230b2c4459c1028b76c47d38654b00
       env:
