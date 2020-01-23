@@ -27,7 +27,7 @@ jobs:
     - run: gem install brakeman
     - run: brakeman --no-exit-on-warn . -o output.json
 
-    - uses: rachicks/appsecinabox/action-a/@85d432a72767fd64aaefad0d3da04e414a2509ac
+    - uses: rachicks/appsecinabox/action-a/@d38aed70a29214223a6c9e8d891a51fabaee83eb
       env:
         SPLUNK_TOKEN: "${{ secrets.SPLUNK_TOKEN }}"
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
