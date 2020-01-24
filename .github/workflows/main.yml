@@ -5,34 +5,32 @@ jobs:
   build:
     name: AppSecInABox
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout Project
       uses: actions/checkout@v1
+      
     - name: Install Ruby
       uses: actions/setup-ruby@v1
       with:
         ruby-version: '2.x'
+
     - name: Install Python
       uses: actions/setup-python@v1
       with:
         python-version: '3.x'
+        
     - name: Lizard
       run: pip install lizard
-    - name: mkdir
-      run: mkdir ~/.npm-global  
-    - name: node-modules path
-      env: 
-        NODE_PATH: ~/.npm-global
-      run: echo $USER
-    - name: chown
-      run: sudo chown -R $USER  /usr/local/lib/node_modules
-    - name: secret-shield 
-      run: sudo npm install -g @mapbox/secret-shield
-    - uses: rachicks/appsecinabox/action-a
+    
+    - run: sudo npm install -g @mapbox/secret-shield
+    - run: gem install brakeman
+    - run: brakeman --no-exit-on-warn . -o output.json
+
+    - uses: rachicks/appsecinabox/action-a/@0dd7e04abf1397a45346f6e6195e7ecd69c1899b
       env:
-        NODE_PATH: ~/.npm-global
         SPLUNK_TOKEN: "${{ secrets.SPLUNK_TOKEN }}"
-        GITHUB_TOKEN: "${{ secrets.myToken }}"
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         SPLUNK_URL:  "${{ secrets.SPLUNK_URL }}"
         DEBUG_ACTION: true
         APPSEC_GUY: rachicks
