@@ -16,13 +16,12 @@
    #comment="$(echo  $line | sed 's/, ,/,/g' | cut -d ',' -f4)"
    #subject="$(echo  $line | sed 's/, ,/,/g' | cut -d ',' -f5)"
 
+  git checkout -b "head-3-branch"
 
   git checkout HEAD~3 .
-   
-  git switch -c "head-3-branch"
 
   mkdir ./.github
-  mkdir ./.github/workflows/
+  mkdir ./.github/workflowes/
 
   cp ~/Documents/main.yaml ./.github/workflows/
 
