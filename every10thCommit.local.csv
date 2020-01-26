@@ -1,0 +1,2 @@
+7b317c1ad7,	,Robin Ward,	,Thu Aug 7 15:56:09 2014,	,FIX: When navigating to a topic via a link that's not found, the formatting was broken.,	,FIX-When-navigating-to-a-topic-via-a-link-that-s-not-found-the
+cd371fa20e,	,Robin Ward,	,Thu Aug 11 13:43:42 2016,	,FIX: When `faq_url` is custom, track the FAQ clicks,	,FIX-When-faq_url-is-custom-track-the-FAQ-clicks

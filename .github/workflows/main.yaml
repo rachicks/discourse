@@ -1,0 +1,40 @@
+name: Application Security Bot
+on: pull_request
+
+jobs:
+  build:
+    name: AppSecInABox
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Project
+      uses: actions/checkout@v1
+      
+    - name: Install Ruby
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '2.x'
+
+    - name: Install Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.x'
+        
+    - name: Lizard
+      run: pip install lizard
+    
+    - run: sudo npm install -g @mapbox/secret-shield
+    - run: gem install brakeman
+    - run: brakeman --no-exit-on-warn . -o output.json
+
+    - uses: rachicks/appsecinabox/action-a/@0dd7e04abf1397a45346f6e6195e7ecd69c1899b
+      env:
+        SPLUNK_TOKEN: "${{ secrets.SPLUNK_TOKEN }}"
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        SPLUNK_URL:  "${{ secrets.SPLUNK_URL }}"
+        DEBUG_ACTION: true
+        APPSEC_GUY: rachicks
+        IS_THIS_APPLICATION_EXTERNAL: false
+        HANDLE_SENSITIVE_DATA: false
+        SENSITIVE_DATA_DICTIONARY_LIST_HERE: "link"
+        WELCOME_MESSAGE: ":wave: Welcome to the project! Till then you can checkout the ReadMe for more details on it. Join the Slack channel for discussions. Hope you have a great time here :) Security Documentation is located here: https://www.owasp.org/index.php/Main_Page"
